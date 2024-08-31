@@ -16,6 +16,9 @@ export default class BlockUsageController extends ExampleController {
   @tracked
   pageSize = 25;
 
+  @tracked
+  filterString = 'C';
+
   get columnsForSecondTable() {
     return this.columns.slice(2);
   }

@@ -9,8 +9,13 @@
   @columns={{this.columns}}
   @themeInstance={{this.fw.themeInstance}}
   @multipleExpand={{true}}
+  @filterString={{this.filterString}}
   @multipleSelect={{true}} as |MT|>
-  <MT.GlobalFilter/>
+  <MT.GlobalFilter>
+    <label>
+      Search: <Input @type="text" @value={{MT.globalFilter}} {{on "input" MT.changeGlobalFilter}} />
+    </label> 
+  </MT.GlobalFilter>
   <MT.ColumnsDropdown/>
   <MT.Table as |Table|>
     <Table.Header as |Header|>
